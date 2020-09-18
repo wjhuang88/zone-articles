@@ -1,0 +1,5 @@
+{
+    "pasteImage.basePath": "${projectRoot}",
+    "pasteImage.path": "${projectRoot}/images",
+    "pasteImage.insertPattern": "${imageSyntaxPrefix}https://gitee.com/wjhuang88/hwj-zone-articles/raw/master/${imageFilePath}${imageSyntaxSuffix}"
+}
