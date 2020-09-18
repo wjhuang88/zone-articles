@@ -1,7 +1,6 @@
 [
     {
         "title": "测试",
-        "urlPath": "hello-world",
-        "filePath": "hello-world.md"
+        "path": "hello-world"
     }
 ]
