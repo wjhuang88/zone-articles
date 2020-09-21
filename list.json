@@ -2,5 +2,9 @@
     {
         "title": "测试",
         "path": "hello-world"
+    },
+    {
+        "title": "测试2",
+        "path": "hello-world"
     }
 ]
