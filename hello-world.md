@@ -6,4 +6,4 @@ date: '2020-01-01'
 
 还能给你整张图出来你信不
 
-![](https://gitee.com/wjhuang88/hwj-zone-articles/raw/master/images/test.png)
+![](images/test.png)
