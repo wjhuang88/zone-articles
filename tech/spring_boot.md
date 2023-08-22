@@ -35,9 +35,11 @@ Spring Boot可以帮助我们轻易创建出可独立运行的，基于Spring的
 ## 安装Spring Boot
 
 Spring Boot可以使用“传统”的Java开发工具或者作为一个命令行工具安装。但无论如何，你需要[Java SDK v1.6](http://www.java.com/)以上的开发环境。 你可以用以下命名来查看你的Java版本：
+
 ```bash
 $ java -version
 ```
+
 如果你是一个Java开发的新手或者你只是想体验一下Spring Boot，你可能首先想试试[Spring Boot CLI](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#getting-started-installing-the-cli)，你也可以继续阅读下面的内容来了解“传统”方式的使用。
 
 > 虽然Spring Boot兼容Java 1.6，但如果可能的话，请尽量使用最新版本的Java环境。
@@ -56,6 +58,7 @@ Spring Boot兼容Apache Maven 3.2或更高版本。如果你没有安装Maven，
 Spring Boot的依赖使用`org.springframework.boot`作为`groupId`，通常你的Maven POM文件需要继承自`spring-boot-starter-parent`项目，然后声明一个或多个[“Starter POMs”](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot-starter-poms)依赖。Spring Boot还提供了一个可选的[Maven plugin](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#build-tool-plugins-maven-plugin)用来创建可执行的jar包。
 
 一个常规的pom.xml如下：
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -106,6 +109,7 @@ Spring Boot依赖使用`org.springframework.boot`作为`group`。
 > Gradle Wrapper提供了一个很优雅的方式将Gradle“包含”到你需要编译的项目中，它是一个可以和代码一起提交的小型的脚本和库，帮助你启动一个编译进程。详情参看[这里](http://www.gradle.org/docs/current/userguide/gradle_wrapper.html)。
 
 一个常规的build.gradle文件如下：
+
 ```groovy
 buildscript { 
     repositories { 
@@ -156,20 +160,25 @@ Spring Boot CLI是一个命令行工具，可以帮助你快速建立Spring项�
 #### 使用SDKMAN! 安装
 
 SDKMAN! (The Software Development Kit Manager)可以用来管理多种SDK的多个版本，包括Groovy和Spring Boot CLI。从[sdkman.io](http://sdkman.io/)获取SDKMAN!然后通过下面的命令来安装Spring Boot：
+
 ```bash
 $ sdk install springboot
 $ spring --version
 Spring Boot v1.3.6.RELEASE
 ```
+
 如果你在开发有关CLI的特性，并且想要方便的获取你刚刚构建的版本，可以使用下面的额外指令：
+
 ```bash
 $ sdk install springboot dev /path/to/spring-boot/spring-boot-cli/target/spring-boot-cli-1.3.6.RELEASE-bin/spring-1.3.6.RELEASE/
 $ sdk default springboot dev
 $ spring --version
 Spring CLI v1.3.6.RELEASE
 ```
+
 这将会安装一个名叫`dev`实例的`spring`本地实例，这个实例指向你的目标构建路径，这样你每次重新构建Spring Boot，`spring`命令就会保持同步更新了。
 你可以用下面的命令来查看：
+
 ```bash
 $ sdk ls springboot
 ================================================================================
@@ -186,10 +195,12 @@ Available Springboot Versions
 #### OSX Homebrew安装
 
 如果你在使用Mac并且使用[Homebrew](http://brew.sh/)，安装Spring Boot CLI需要做的所有事情就是运行下面的命令：
+
 ```bash
 $ brew tap pivotal/tap
 $ brew install springboot
 ```
+
 Homebrew会将`spring`安装到`/usr/local/bin`。
 
 > 如果你找不到这个formula，可能你安装的brew过期了，运行`brew update`然后重试。
@@ -197,6 +208,7 @@ Homebrew会将`spring`安装到`/usr/local/bin`。
 #### MacPorts installation
 
 如果你使用Mac并且使用[MacPorts](http://www.macports.org/), 安装Spring Boot CLI需要做的所有事情就是运行下面的命令：
+
 ```bash
 $ sudo port install spring-boot-cli
 ```
@@ -204,6 +216,7 @@ $ sudo port install spring-boot-cli
 #### 命令行自动补全
 
 Spring Boot CLI有一个配套的脚本为[BASH](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29)和[zsh](http://en.wikipedia.org/wiki/Zsh)提供了自动补全功能。 你可以在任意的shell中用`source`来执行这个脚本(同样名叫`spring`)，或者将其放在你个人或者系统级的bash自动补全初始化目录中。在Debian系统中，系统级的脚本位于`/shell-completion/bash`中，当启动一个新的shell时，目录中的脚本会全部执行。你可以手动运行这个脚本，例如你使用SDKMAN!安装的话，就使用以下的命令：
+
 ```bash
 $ . ~/.sdkman/springboot/current/shell-completion/bash/spring
 $ spring <HIT TAB HERE>
@@ -215,6 +228,7 @@ $ spring <HIT TAB HERE>
 #### 快速创建一个Spring CLI示例
 
 你可以使用这里的一个非常简单的web应用来测试你的安装。创建一个名为app.groovy的文件：
+
 ```groovy
 @RestController
 class ThisWillActuallyRun { 
@@ -226,7 +240,9 @@ class ThisWillActuallyRun {
 
 }
 ```
+
 然后在shell中运行：
+
 ```bash
 $ spring run app.groovy
 ```
@@ -234,6 +250,7 @@ $ spring run app.groovy
 > 如果你第一次运行，会花费一些时间来下载依赖，后面再次运行的时候会快的多。
 
 在你最喜欢的浏览器中打开[localhost:8080](http://localhost:8080/)然后你应该能看到下面的输出：
+
 ```
 Hello World!
 ```
@@ -251,6 +268,7 @@ Hello World!
 > 网址[spring.io](http://spring.io/)下包含了很多使用了Spring Boot的“Getting Started”指南，如果你在寻找特定问题的解决方案，你可以先去那里看看。你可以从这个网址[start.spring.io](https://start.spring.io/)进入来简化步骤，在依赖搜索中选择web starter，这将自动生成一个新的项目结构，这样你就可以[直接开始编码](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#getting-started-first-application-code)。 你还可以查看[详细文档](https://github.com/spring-io/initializr)。
 
 在开始之前，打开一个终端并验证你的Java和Maven版本：
+
 ```bash
 $ java -version
 java version "1.7.0_51"
@@ -269,6 +287,7 @@ Java version: 1.7.0_51, vendor: Oracle Corporation
 ### 创建POM
 
 我们需要创建一个Maven `pom.xml`文件，这个`pom.xml`文件将作为你项目的构建配置。打开你最常用的文本编辑器然后添加如下内容：
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"> 
@@ -288,6 +307,7 @@ Java version: 1.7.0_51, vendor: Oracle Corporation
 
 </project>
 ```
+
 这样你就有了一个可以构建的项目，你可以运行`mvn package`来测试(你现在可以暂时忽略“jar will be empty - no content was marked for inclusion!”的警告信息)。
 
 > 这时候你就可以把项目导入一个IDE了(大部分现代Java IDE都内置了Maven的支持)。但为了简单起见，我们接下来还是使用纯文本编辑器来操作这个示例。
@@ -298,6 +318,7 @@ Spring Boot提供了大量的“Starter POMs”，让你可以很方便的添加
 
 
 其他的“Starter POMs”可以让我们很方便的使用开发某种特定应用时需要的依赖。如果我们想开发一个web应用，我们就引入一个`spring-boot-starter-web`的依赖，在这之前我们先来看看我们现在已经引入的依赖：
+
 ```bash
 $ mvn dependency:tree
 
@@ -312,11 +333,13 @@ $ mvn dependency:tree
     </dependency>
 </dependencies>
 ```
+
 如果你再次运行`mvn dependency:tree`命令，你会发现现在出现了一些新的依赖，包括Tomcat和Spring Boot。
 
 ### 敲代码
 
 为了完成我们的应用，我们需要创建一个Java文件。Maven默认会从`src/main/java`中找到源代码并编译，所以你需要按照这个格式创建目录结构，然后添加一个叫做`src/main/java/Example.java`的文件：
+
 ```java
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
@@ -338,6 +361,7 @@ public class Example {
 
 }
 ```
+
 这里没有多少代码，后面还会添加很多代码进来，但现在让我们从最重要的部分开始吧。
 
 #### 注解@RestController和@RequestMapping
@@ -363,6 +387,7 @@ public class Example {
 ### 运行示例
 
 到这里我们的应用应该可以顺利运行了，如果我们使用了`spring-boot-starter-parent`的POM，我们将会有一个非常有用的`run goal`，可以用来直接启动我们的应用，在项目根目录键入命令`mvn spring-boot:run`来启动应用：
+
 ```bash
 $ mvn spring-boot:run
 
@@ -378,10 +403,13 @@ $ mvn spring-boot:run
 ....... . . .
 ........ Started Example in 2.222 seconds (JVM running for 6.514)
 ```
+
 打开浏览器并访问[localhost:8080](http://localhost:8080/)你应该可以看到如下的输出：
+
 ```
 Hello World!
 ```
+
 如果想退出应用可以按`ctrl-c`。
 
 ### 创建一个可执行jar文件
@@ -397,6 +425,7 @@ Hello World!
 > Spring Boot采取了一个[不同的方式](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#executable-jar)，允许你真正的嵌套jar文件。
 
 想要创建一个可执行jar文件，我们需要在`pom.xml`中添加`spring-boot-maven-plugin`，在`dependencies`段下面添加如下：
+
 ```xml
 <build> 
     <plugins> 
@@ -411,6 +440,7 @@ Hello World!
 > `spring-boot-starter-parent`的POM包含`<executions>`配置，绑定了`repackage` goal，如果你没有使用parent POM，你需要自己声明这个配置，参考[插件文档](http://docs.spring.io/spring-boot/docs/1.3.6.RELEASE/maven-plugin/usage.html)。
 
 保存你的`pom.xml`并且在命令行中运行`mvn package`：
+
 ```bash
 $ mvn package
 
@@ -428,13 +458,17 @@ $ mvn package
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
 ```
+
 这时你在`target`目录中就能看到`myproject-0.0.1-SNAPSHOT.jar`，这个文件的大小应该在10Mb左右。如果你想查看文件内部的情况，可以使用`jar tvf`：
+
 ```bash
 $ jar tvf target/myproject-0.0.1-SNAPSHOT.jar
 ```
+
 在`target`目录中应该还可以看到一个小得多的文件，名为`myproject-0.0.1-SNAPSHOT.jar.original`，这是在Spring Boot执行repackag之前Maven创建的原始jar文件。
 
 要运行应用，我们可以使用`java -jar`命令：
+
 ```bash
 $ java -jar target/myproject-0.0.1-SNAPSHOT.jar
 
@@ -450,6 +484,7 @@ $ java -jar target/myproject-0.0.1-SNAPSHOT.jar
 ....... . . .
 ........ Started Example in 2.536 seconds (JVM running for 2.864)
 ```
+
 和之前一样，如果想退出应用，按`ctrl-c`。
 
 ## 接下来阅读什么内容
