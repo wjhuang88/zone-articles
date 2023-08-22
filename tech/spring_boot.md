@@ -2,7 +2,7 @@
 
 如果你刚开始学习使用Spring Boot，或者Spring框架，那么这篇文章正是为你准备的！通过这篇文章，我们将介绍关于Spring Boot的一些基本知识。你将从接下来的章节中了解到Spring Boot的安装命令，我们将一起构建我们的第一个Spring Boot应用，然后我们将一起讨论一些核心原则。
 
-## Spring Boot简介
+## Spring Boot简介
 
 Spring Boot可以帮助我们轻易创建出可独立运行的，基于Spring的生产级应用，这些应用甚至可以直接运行而不依赖其他环境(仅需要JVM)。我们用统一的方式来看待Spring平台以及第三方库，因此你在使用的过程中不会有太多混乱的情况出现，并且大部分Spring Boot应用几乎不需要处理烦人的Spring配置。
 使用Spring Boot你可以创建一个可直接用`java -jar`命令运行的包，当然也可以创建传统的war包，我们还提供了一个命令行工具用来运行“spring脚本”。
@@ -13,12 +13,12 @@ Spring Boot可以帮助我们轻易创建出可独立运行的，基于Spring的
 - 提供大量的公共的非功能性特性(例如：嵌入式服务器，权限管理，性能监控，健康检查，外部配置等)。
 - 绝对不需要代码生成并且不需要XML配置文件。
 
-## 系统要求
+## 系统要求
 
 默认情况下Spring Boot 1.3.6.RELEASE要求[Java 7](http://www.java.com/)和Spring Framework 4.2.7.RELEASE或更高版本。你也可以使用Java 6，但是需要一些额外的配置。我们为Maven (3.2+)和Gradle (1.12+)提供了构建支持。
 > 虽然你可以在Java 6或Java 7环境下使用Spring Boot，但我们通常建议如果有可能尽量使用Java 8。
 
-### Servlet容器
+### Servlet容器
 
 默认包含下列嵌入式服务器：
 
@@ -32,7 +32,7 @@ Spring Boot可以帮助我们轻易创建出可独立运行的，基于Spring的
 
 你可以将Spring Boot应用部署到任何的Servlet 3.0+兼容的容器中。
 
-## 安装Spring Boot
+## 安装Spring Boot
 
 Spring Boot可以使用“传统”的Java开发工具或者作为一个命令行工具安装。但无论如何，你需要[Java SDK v1.6](http://www.java.com/)以上的开发环境。 你可以用以下命名来查看你的Java版本：
 
@@ -44,12 +44,12 @@ $ java -version
 
 > 虽然Spring Boot兼容Java 1.6，但如果可能的话，请尽量使用最新版本的Java环境。
 
-### 安装指令
+### 安装指令
 
 你可以像任何标准的Java库一样的方式使用Spring Boot，只需要简单的将相关的spring-boot-\*.jar文件引入到你的classpath中。Spring Boot不要求任何特殊的工具集成，所以你可以使用任何IDE或者文本编辑器，Spring Boot应用没有任何特殊的地方，所以你可以像其他Java程序一样运行和调试。
 虽然你* 可以 *简单的把Spring Boot的jar文件复制到你的项目中，但通常的做法是使用一些支持依赖管理的构建工具(例如Maven或者Gradle)。
 
-#### Maven安装
+#### Maven安装
 
 Spring Boot兼容Apache Maven 3.2或更高版本。如果你没有安装Maven，你可以按照[maven.apache.org](http://maven.apache.org/)中的方法安装。
 
@@ -98,7 +98,7 @@ Spring Boot的依赖使用`org.springframework.boot`作为`groupId`，通常你�
 
 > 使用`spring-boot-starter-parent`是一个使用Spring Boot非常好的方式，但并不总是所有情况下都是最适合的方式，有时你可能需要你的项目继承自其它的父项目POM，或者你只是单纯的不喜欢我们的POM设置，我们下面有专门的一个章节来介绍不依赖我们的父项目POM如何使用Spring Boot。
 
-#### Gradle安装
+#### Gradle安装
 
 Spring Boot兼容Gradle 1.12或更高版本。如果你还没有安装Gradle，你可以按照[www.gradle.org/](http://www.gradle.org/)中的方法安装。
 Spring Boot依赖使用`org.springframework.boot`作为`group`。
@@ -147,7 +147,7 @@ Spring Boot CLI是一个命令行工具，可以帮助你快速建立Spring项�
 
 你并不需要在你的Spring Boot项目中使用CLI工具，但它绝对是落地一个Spring应用最快的方式。
 
-#### 手动安装
+#### 手动安装
 
 你可以在下面的Spring软件源地址下载Spring CLI：
 - [spring-boot-cli-1.3.6.RELEASE-bin.zip](http://repo.spring.io/release/org/springframework/boot/spring-boot-cli/1.3.6.RELEASE/spring-boot-cli-1.3.6.RELEASE-bin.zip)
@@ -157,7 +157,7 @@ Spring Boot CLI是一个命令行工具，可以帮助你快速建立Spring项�
 
 下载完成后的压缩包中可以找到[INSTALL.txt](http://raw.github.com/spring-projects/spring-boot/v1.3.6.RELEASE/spring-boot-cli/src/main/content/INSTALL.txt)，按照其中的指令进行安装。大体上如下：在`.zip`文件的`bin/`目录下有一个`spring`脚本(Windows下是`spring.bat`)，或者你也可以直接通过`java -jar`命令运行`.jar`文件(使用上述的脚本可以帮助你确保classpath正确设置) 。
 
-#### 使用SDKMAN! 安装
+#### 使用SDKMAN! 安装
 
 SDKMAN! (The Software Development Kit Manager)可以用来管理多种SDK的多个版本，包括Groovy和Spring Boot CLI。从[sdkman.io](http://sdkman.io/)获取SDKMAN!然后通过下面的命令来安装Spring Boot：
 
@@ -192,7 +192,7 @@ Available Springboot Versions
 ================================================================================
 ```
 
-#### OSX Homebrew安装
+#### OSX Homebrew安装
 
 如果你在使用Mac并且使用[Homebrew](http://brew.sh/)，安装Spring Boot CLI需要做的所有事情就是运行下面的命令：
 
@@ -205,7 +205,7 @@ Homebrew会将`spring`安装到`/usr/local/bin`。
 
 > 如果你找不到这个formula，可能你安装的brew过期了，运行`brew update`然后重试。
 
-#### MacPorts installation
+#### MacPorts installation
 
 如果你使用Mac并且使用[MacPorts](http://www.macports.org/), 安装Spring Boot CLI需要做的所有事情就是运行下面的命令：
 
@@ -213,7 +213,7 @@ Homebrew会将`spring`安装到`/usr/local/bin`。
 $ sudo port install spring-boot-cli
 ```
 
-#### 命令行自动补全
+#### 命令行自动补全
 
 Spring Boot CLI有一个配套的脚本为[BASH](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29)和[zsh](http://en.wikipedia.org/wiki/Zsh)提供了自动补全功能。 你可以在任意的shell中用`source`来执行这个脚本(同样名叫`spring`)，或者将其放在你个人或者系统级的bash自动补全初始化目录中。在Debian系统中，系统级的脚本位于`/shell-completion/bash`中，当启动一个新的shell时，目录中的脚本会全部执行。你可以手动运行这个脚本，例如你使用SDKMAN!安装的话，就使用以下的命令：
 
@@ -225,7 +225,7 @@ $ spring <HIT TAB HERE>
 
 > 如果你使用Homebrew或MacPorts安装Spring Boot CLI，命令行自动补全脚本会自动注册到你的shell中。
 
-#### 快速创建一个Spring CLI示例
+#### 快速创建一个Spring CLI示例
 
 你可以使用这里的一个非常简单的web应用来测试你的安装。创建一个名为app.groovy的文件：
 
@@ -255,13 +255,13 @@ $ spring run app.groovy
 Hello World!
 ```
 
-### 从早期的Spring Boot版本升级
+### 从早期的Spring Boot版本升级
 
 如果你正在从早期的Spring Boot发行版升级，查看[project wiki](http://github.com/spring-projects/spring-boot/wiki)上的“release notes”。你会在每个发行版本的“new and noteworthy”特性列表旁边找到升级的指令。
 
 要升级已经存在的CLI，请使用相应的包管理器命令(例如`brew upgrade`)，或者如果你的CLI是手动安装的，参考[标准指令](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#getting-started-manual-cli-installation)，记得更新你的PATH环境变量，清除老旧的引用地址。
 
-## 开发你的第一个Spring Boot应用
+## 开发你的第一个Spring Boot应用
 
 现在我们来开发一个简单的“Hello World” Java web应用，并且用上一些Spring Boot的关键特性。我们会使用Maven来构建这个项目，大部分的IDE都支持Maven。
 
@@ -284,7 +284,7 @@ Java version: 1.7.0_51, vendor: Oracle Corporation
 
 > 你需要为这个示例创建一个单独的目录，后续的所有指令都假设你创建了合适的目录，并且你的“当前目录”就在你的项目目录中。
 
-### 创建POM
+### 创建POM
 
 我们需要创建一个Maven `pom.xml`文件，这个`pom.xml`文件将作为你项目的构建配置。打开你最常用的文本编辑器然后添加如下内容：
 
@@ -312,7 +312,7 @@ Java version: 1.7.0_51, vendor: Oracle Corporation
 
 > 这时候你就可以把项目导入一个IDE了(大部分现代Java IDE都内置了Maven的支持)。但为了简单起见，我们接下来还是使用纯文本编辑器来操作这个示例。
 
-### 添加classpath依赖
+### 添加classpath依赖
 
 Spring Boot提供了大量的“Starter POMs”，让你可以很方便的添加需要的jar包到你的classpath。我们的示例程序已经在POM的parent中使用了`spring-boot-starter-parent`，这是一个特殊的starter，它提供了很多有用的默认Maven配置，以及依赖管理的支持，使得你在使用一些依赖的时候可以省略`version`版本号。
 
@@ -336,7 +336,7 @@ $ mvn dependency:tree
 
 如果你再次运行`mvn dependency:tree`命令，你会发现现在出现了一些新的依赖，包括Tomcat和Spring Boot。
 
-### 敲代码
+### 敲代码
 
 为了完成我们的应用，我们需要创建一个Java文件。Maven默认会从`src/main/java`中找到源代码并编译，所以你需要按照这个格式创建目录结构，然后添加一个叫做`src/main/java/Example.java`的文件：
 
@@ -364,7 +364,7 @@ public class Example {
 
 这里没有多少代码，后面还会添加很多代码进来，但现在让我们从最重要的部分开始吧。
 
-#### 注解@RestController和@RequestMapping
+#### 注解@RestController和@RequestMapping
 
 我们的`Example`类里面的第一个注解是`@RestController`，它是一个*构造型(stereotype)*注解，用来标记并且告诉Spring这个类扮演一个特殊的角色，在这个例子里面，我们的类是一个web应用的`@Controller`，当Spring要处理web请求的时候会找到这个类。
 
@@ -372,7 +372,7 @@ public class Example {
 
 > 这里的`@RestController`和`@RequestMapping`注解是Spring MVC提供的注解(它们并不是由Spring Boot提供的特殊注解)，参考[MVC相关文档](http://docs.spring.io/spring/docs/4.2.7.RELEASE/spring-framework-reference/htmlsingle#mvc)。
 
-#### 注解@EnableAutoConfiguration
+#### 注解@EnableAutoConfiguration
 
 上面的第二类级注解是@EnableAutoConfiguration，这个注解会让Spring Boot基于你已添加的jar依赖来“猜测”你想怎么样来配置Spring。如果你添加了`spring-boot-starter-web`因此引入了Tomcat和Spring MVC的依赖，自动配置系统会假设你要开发一个web应用并依此帮你配置好Spring。
 
@@ -380,11 +380,11 @@ public class Example {
 
 > 自动配置在设计上跟“Starter POMs”十分契合，但这两个概念并没有直接绑定关系，你可以自由的选择外部jar依赖，Spring Boot还是可以很好帮助你自动配置你的应用。
 
-#### “main”方法
+#### “main”方法
 
 我们的应用最后一部分是`main`方法，这是一个遵循Java惯例的标准应用入口方法，我们的`main`方法通过执行`run`方法代理了Spring Boot的`SpringApplication`类。`SpringApplication`将会运行我们的应用，启动自动配置的Tomcat服务器。我们需要将`Example.class`作为参数传入`run`方法，以告诉Spring这是我们的首选组件，命令行参数也会通过`args`数组传入。
 
-### 运行示例
+### 运行示例
 
 到这里我们的应用应该可以顺利运行了，如果我们使用了`spring-boot-starter-parent`的POM，我们将会有一个非常有用的`run goal`，可以用来直接启动我们的应用，在项目根目录键入命令`mvn spring-boot:run`来启动应用：
 
@@ -412,7 +412,7 @@ Hello World!
 
 如果想退出应用可以按`ctrl-c`。
 
-### 创建一个可执行jar文件
+### 创建一个可执行jar文件
 
 让我们创建一个完全自包含的并且可以在生产环境运行的可执行jar文件，以此来结束我们的示例。可执行jar(有时也称为“fat jar”)是一个包含了运行应用所需的所有依赖的包文件。
 
