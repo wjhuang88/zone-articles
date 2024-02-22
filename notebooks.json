@@ -10,5 +10,11 @@
         "title": "技术",
         "remark": "技术文集",
         "dir": "tech"
+    },
+    {
+        "id": 2,
+        "title": "随笔",
+        "remark": "随笔杂文",
+        "dir": "essay"
     }
 ]
