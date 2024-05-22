@@ -1,3 +1,11 @@
++++
+title = "Airbnb的JavaScript风格指南(ES5)"
+date = "2020-01-01"
+update = "2020-01-01"
+summary = "Airbnb的JavaScript风格指南(ES5)"
+path = "js_style.md"
++++
+
 *用合理的方式编写JavaScript*
 **[原文链接](https://github.com/airbnb/javascript/tree/master/es5)**
 

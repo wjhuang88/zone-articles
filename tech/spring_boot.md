@@ -1,3 +1,11 @@
++++
+ title = "Spring Boot (1.3.6.RELEASE) 入门"
+ date = "2020-01-01"
+ update = "2020-01-01"
+ summary = "如果你刚开始学习使用Spring Boot，或者Spring框架，那么这篇文章正是为你准备的！通过这篇文章，我们将介绍关pring =oot的一些基本知识。你将从接下来的章节中了解到Spring Boot的安装命令，我们将一起构建我们的第一个Spring Boot应用后我们将一起讨论一些核心原则。"
+ path = "spring_boot.md"
++++
+
 *本文翻译自Spring Boot官方文档的Getting Started部分，原文可[点击此处](http://docs.spring.io/spring-boot/docs/1.3.6.RELEASE/reference/htmlsingle/#getting-started)查看。*
 
 如果你刚开始学习使用Spring Boot，或者Spring框架，那么这篇文章正是为你准备的！通过这篇文章，我们将介绍关于Spring Boot的一些基本知识。你将从接下来的章节中了解到Spring Boot的安装命令，我们将一起构建我们的第一个Spring Boot应用，然后我们将一起讨论一些核心原则。
