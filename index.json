@@ -34,14 +34,6 @@
             "summary": "为了理解区块和链的概念，我们先讲一段故事。",
             "collection": "tech",
             "path": "block_chain_basic.md"
-        },
-        {
-            "title": "过往未来",
-            "date": "2024-01-01 04:37",
-            "update": "2024-01-01 06:09",
-            "summary": "回望一下过去一年的感悟",
-            "collection": "essay",
-            "path": "to-the-future.md"
         }
     ]
 }
