@@ -4,12 +4,12 @@
     },
     "list": [
         {
-            "title": "测试",
-            "date": "2020-01-01",
-            "update": "2020-01-01",
-            "summary": "站点内容开发中，这是用来测试的",
-            "collection": "demo",
-            "path": "hello-world.md"
+            "title": "进化之路：人工智能与软件开发",
+            "date": "2025-01-22",
+            "update": "2025-01-22",
+            "summary": "人工智能（AI）作为当今技术革新的核心力量，正在以惊人的速度推动着多个行业的变革，特别是在软件开发领域。AI不仅有能力提升开发效率，还能在深层次上重塑开发流程和技术架构",
+            "collection": "tech",
+            "path": "ai_and_development.md"
         },
         {
             "title": "Airbnb的JavaScript风格指南(ES5)",
