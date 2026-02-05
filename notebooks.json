@@ -1,23 +1,16 @@
 [
-    {
-        "id": 0,
-        "title": "测试",
-        "subtitle": "DEMO",
-        "remark": "站点内容开发中，这是用来测试的",
-        "path": "demo"
-    },
-    {
-        "id": 1,
-        "title": "技术",
-        "subtitle": "TECH",
-        "remark": "技术文集",
-        "path": "tech"
-    },
-    {
-        "id": 2,
-        "title": "随笔",
-        "subtitle": "ESSAY",
-        "remark": "随笔杂文",
-        "path": "essay"
-    }
+  {
+    "id": 0,
+    "title": "Tech",
+    "subtitle": "TECH",
+    "remark": "Tech articles",
+    "path": "tech"
+  },
+  {
+    "id": 1,
+    "title": "Essay",
+    "subtitle": "ESSAY",
+    "remark": "Essay articles",
+    "path": "essay"
+  }
 ]
