@@ -1,14 +1,14 @@
 [
   {
     "id": 0,
-    "title": "Tech",
+    "title": "技术",
     "subtitle": "TECH",
     "remark": "Tech articles",
     "path": "tech"
   },
   {
     "id": 1,
-    "title": "Essay",
+    "title": "随笔",
     "subtitle": "ESSAY",
     "remark": "Essay articles",
     "path": "essay"
